@@ -4,6 +4,7 @@ import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { useNearScreen } from '../../hooks/useNearScreen'
 import { FavButton } from '../FavButton'
 import { ToggleLikeMutation } from '../../container/ToggleLikeMutation'
+import { Link } from '@reach/router'
 
 export const PhotoCard = ({ id, likes = 0, src }) => {
   // useRef nos permite capturar un elemento del dom y guardar una referencia
@@ -16,11 +17,11 @@ export const PhotoCard = ({ id, likes = 0, src }) => {
       {
         show &&
           <>
-            <a href={`/?detail=${id}`}>
+            <Link to={`/detail/${id}`}>
               <ImgWrapper>
                 <Img src={src} />
               </ImgWrapper>
-            </a>
+            </Link>
             <ToggleLikeMutation>
               {
                 (toggleLike) => {
