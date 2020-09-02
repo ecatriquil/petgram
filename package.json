@@ -7,7 +7,8 @@
         "vercel-build": "npm run build",
         "build": "webpack",
         "lint": "standard",
-        "dev": "webpack-dev-server --history-api-fallback"
+        "dev": "webpack-dev-server --history-api-fallback",
+        "serve:dev": "webpack --mode 'development' && npx serve dist -s"
     },
     "repository": {
         "type": "git",
@@ -36,9 +37,11 @@
         "apollo-boost": "^0.4.9",
         "graphql": "^15.3.0",
         "intersection-observer": "^0.11.0",
+        "prop-types": "^15.7.2",
         "react": "^16.13.1",
         "react-apollo": "^3.1.5",
         "react-dom": "^16.13.1",
+        "react-helmet": "^6.1.0",
         "react-icons": "^3.11.0",
         "styled-components": "^5.1.1"
     },
